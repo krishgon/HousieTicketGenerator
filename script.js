@@ -5,7 +5,8 @@ function goToGenerator() {
 function genNewTicket() {
     var ticketCells = document.getElementsByClassName("closed");
     for(var i = 0, len = ticketCells.length; i < len; i++){
-        ticketCells[i].innerHTML = generateHousieNumber();
+        var cellNumber = ticketCells[i].getElementsByTagName("span")[0];
+        cellNumber.innerHTML = generateHousieNumber();
     }
 }
 
