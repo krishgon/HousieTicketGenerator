@@ -8,6 +8,7 @@
 body{
     line-height: 1.6rem;
     background-image: linear-gradient(90deg, #ee6352, purple, #ee6352);
+    font-size: 18px;
 }
 
 h1{
@@ -23,15 +24,17 @@ h1{
 table{
     margin: 2% auto;
     width: fit-content;
-    padding: 4%;
+    padding: 5%;
     background-image: url(ice-cream.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
+
 td{
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 24px;
 }
 
 .closed{
