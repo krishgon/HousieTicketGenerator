@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    line-height: 1.6rem;
+    background-image: linear-gradient(90deg, #ee6352, purple, #ee6352);
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+    color: white;
+    background-color: black;
+    padding: 3rem;
+}
+
+table{
+    margin: 2% auto;
+    width: fit-content;
+    padding: 4%;
+    background-image: url(ice-cream.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+td{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.closed{
+    border: 1px solid black;
+    background-color: #85FFBB;
+}
+
+.download{
+    padding: 1% 1%;
+    color: white;
+    background-color: #0CF214;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+
+.download:hover{
+    background-color: #00DB46;
+}
+
+th{
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+}
+
+.bottom1{
+    position: absolute;
+    top: 60%;
+    left: 80%;
+}
+
+.bottom2{
+    position: absolute;
+    top: 60%;
+    right: 80%;
+}
