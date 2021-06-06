@@ -3,12 +3,9 @@ function goToGenerator() {
 }
 
 function genNewTicket() {
-    var table = document.getElementById("ticket");
-
-    for (let row of table.rows) {
-        for (let cell of row.cells) {
-            cell.innerText = generateHousieNumber();
-        }
+    var ticketCells = document.getElementsByClassName("closed");
+    for(var i = 0, len = ticketCells.length; i < len; i++){
+        ticketCells[i].innerHTML = generateHousieNumber();
     }
 }
 
