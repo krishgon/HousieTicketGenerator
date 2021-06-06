@@ -25,9 +25,9 @@ table{
     margin: 2% auto;
     width: fit-content;
     padding: 5%;
-    background-image: url(ice-cream.jpg);
+    /* background-image: url(ice-cream.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -35,6 +35,7 @@ td{
     width: 3.5rem;
     height: 3.5rem;
     font-size: 24px;
+    color: #46535e;
 }
 
 .closed{

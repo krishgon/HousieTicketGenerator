@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housie Ticket Generator | Dessert</title>
     <link rel="stylesheet" href="dessert_style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -17,13 +18,11 @@
     <img src="cake.png" alt="cake" width="20%"  class="bottom1">
     <img src="cookie.png" alt="cookie" width="20%"  class="bottom2">
 
-    <div class="ticketDiv" >
-    <table>
-
+    <table id="ticket">
     <tr>
     <td></td>
     <td></td>
-    <td class="closed"><sup style="color: red;">O</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -33,16 +32,15 @@
     <td></td>
     <td></td>
     </tr>
-
     <tr>
         <!-- caramel -->
-    <td class="closed"><sup style="color: red;">C</sup> 35</td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
-    <td class="closed"><sup style="color: red;">R</sup> 35</td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
-    <td class="closed"><sup style="color: red;">M</sup> 35</td>
-    <td class="closed"><sup style="color: red;">E</sup> 35</td>
-    <td class="closed"><sup style="color: red;">L</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">C</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">R</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">M</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">E</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">L</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -51,35 +49,9 @@
 
     <tr>
         <!-- H, E -->
-    <td class="closed"><sup style="color: red;">H</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">H</sup> 35</td>
     <td></td>
-    <td class="closed"><sup style="color: red;">E</sup> 35</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td class="closed"><sup style="color: red;">O</sup> 35</td>
-    <td></td>
-    <td class="closed"><sup style="color: red;">O</sup> 35</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td class="closed"><sup style="color: red;">C</sup> 35</td>
-    <td></td>
-    <td></td>
+    <td class="closed"><sup style="color: #D3455B;">E</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -91,11 +63,9 @@
     </tr>
 
     <tr>
-    <td class="closed"><sup style="color: red;">O</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">O</sup> 35</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: red;">V</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">O</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -105,11 +75,39 @@
     </tr>
 
     <tr>
-    <td class="closed"><sup style="color: red;">L</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">C</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+
+    <tr>
+    <td class="closed"><sup style="color: #D3455B;">O</sup> 35</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="closed"><sup style="color: #D3455B;">V</sup> 35</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+
+    <tr>
+    <td class="closed"><sup style="color: #D3455B;">L</sup> 35</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -120,12 +118,12 @@
 
     <tr>
         <!-- ALOMOND -->
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
-    <td class="closed"><sup style="color: red;">L</sup> 35</td>
-    <td class="closed"><sup style="color: red;">M</sup> 35</td>
-    <td class="closed"><sup style="color: red;">O</sup> 35</td>
-    <td class="closed"><sup style="color: red;">N</sup> 35</td>
-    <td class="closed"><sup style="color: red;">D</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">L</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">M</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">O</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">N</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">D</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -134,11 +132,11 @@
     </tr>
 
     <tr>
-    <td class="closed"><sup style="color: red;">T</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">T</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
-    <td class="closed"><sup style="color: red;">I</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">I</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -148,15 +146,15 @@
     </tr>
 
     <tr>
-    <td class="closed"><sup style="color: red;">E</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">E</sup> 35</td>
     <td></td>
     <!-- FALUDA -->
-    <td class="closed"><sup style="color: red;">F</sup> 35</td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
-    <td class="closed"><sup style="color: red;">L</sup> 35</td>
-    <td class="closed"><sup style="color: red;">U</sup> 35</td>
-    <td class="closed"><sup style="color: red;">D</sup> 35</td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">F</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">L</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">U</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">D</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -167,7 +165,7 @@
     <td></td>
     <td></td>
     <td></td>
-    <td class="closed"><sup style="color: red;">L</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">L</sup> 35</td>
     <td></td>
     <td></td>
     <td></td>
@@ -179,23 +177,21 @@
     <tr>
     <td></td>
     <!-- STRAWBERRY  -->
-    <td class="closed"><sup style="color: red;">S</sup> 35</td>
-    <td class="closed"><sup style="color: red;">T</sup> 35</td>
-    <td class="closed"><sup style="color: red;">R</sup> 35</td>
-    <td class="closed"><sup style="color: red;">A</sup> 35</td>
-    <td class="closed"><sup style="color: red;">W</sup> 35</td>
-    <td class="closed"><sup style="color: red;">B</sup> 35</td>
-    <td class="closed"><sup style="color: red;">E</sup> 35</td>
-    <td class="closed"><sup style="color: red;">R</sup> 35</td>
-    <td class="closed"><sup style="color: red;">R</sup> 35</td>
-    <td class="closed"><sup style="color: red;">Y</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">S</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">T</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">R</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">A</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">W</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">B</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">E</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">R</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">R</sup> 35</td>
+    <td class="closed"><sup style="color: #D3455B;">Y</sup> 35</td>
     </tr>
-
     </table>
-    </div>
 
     <button class="download">Download</button>
-    <button class="download">Generate</button>
+    <button class="download" onclick="genNewTicket()">Generate</button>
 
 </body>
 </html>
