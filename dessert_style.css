@@ -30,13 +30,13 @@ table{
 }
 
 td{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
 }
 
 .closed{
     border: 1px solid black;
-    background-color: #85FFBB;
+    background-color: #fff;
 }
 
 .download{

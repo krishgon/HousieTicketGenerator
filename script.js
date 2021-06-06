@@ -1,17 +1,27 @@
-function goToGenerator(){
+function goToGenerator() {
     window.location.href = "generator.html"
 }
 
-function genRandomNum(){
+function genNewTicket() {
+    var table = document.getElementById("ticket");
+
+    for (let row of table.rows) {
+        for (let cell of row.cells) {
+            cell.innerText = generateHousieNumber();
+        }
+    }
+}
+
+function generateHousieNumber() {
     var x;
     x = getRandNum();
-    while((x > 90) || (x == 0)){
+    while ((x > 90) || (x == 0)) {
         x = getRandNum();
     }
 
-    document.getElementById("box").innerHTML = x;
+    return x;
 }
 
-function getRandNum(){
-    return Math.floor(Math.random()*100);
+function getRandNum() {
+    return Math.floor(Math.random() * 100);
 }
