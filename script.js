@@ -1,8 +1,3 @@
-
-
-
-
-
 function goToGenerator() {
     window.location.href = "generator.html"
 }
@@ -12,7 +7,7 @@ function genNewTicket() {
     var ticketNumbers = getNumberList();
 
     console.log("next will be the original value");
-    ticketNumbers.sort();
+    ticketNumbers.sort((a,b)=>a-b);
     console.log(ticketNumbers);
 
     for(var i = 0, len = ticketCells.length; i < len; i++){
@@ -35,7 +30,6 @@ function getNumberList(){
             }
             generatedNumbers.push(number);
         }
-
     }
 
     console.log(generatedNumbers);
