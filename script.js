@@ -61,6 +61,8 @@ var counter = 0;
 
 function downloadTicket(){
     counter = counter + 1;
+
+    console.log("the value of counter is " + counter);
     
     if(counter < 5){
         genNewTicket();
