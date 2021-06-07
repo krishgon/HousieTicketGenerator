@@ -54,30 +54,3 @@ function generateHousieNumber() {
 function getRandNum() {
     return Math.floor(Math.random() * 100);
 }
-
-function downloadTicket(){
-    var node = document.getElementById("ticketContainer");
-
-    domtoimage.toPng(node)
-        .then(function(dataUrl){
-            var img = new Image();
-            img.src = dataUrl;
-            downloadURI(dataUrl, "ticket.png")
-        }).catch(function(error){
-            console.error("daya, kuch toh gadbad hai", error);
-        });
-}
-
-
-function downloadURI(uri, name){
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    delete link;
-}
-
-
-
