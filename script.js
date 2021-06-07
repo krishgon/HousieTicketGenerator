@@ -77,7 +77,7 @@ function downloadTicket(){
         genNewTicket();
         var node = document.getElementById("ticketContainer");
 
-        domtoimage.toPng(node)
+        domtoimage.toPng(node, {bgcolor: "#46535e"})
             .then(function(dataUrl){
                 var img = new Image();
                 img.src = dataUrl;
