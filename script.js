@@ -1,3 +1,8 @@
+window.onload = function() {
+    genNewTicket();
+};
+
+
 function goToGenerator() {
     window.location.href = "generator.html"
 }
@@ -31,7 +36,6 @@ function getNumberList(){
             generatedNumbers.push(number);
         }
     }
-
     console.log(generatedNumbers);
     return generatedNumbers;
 }
