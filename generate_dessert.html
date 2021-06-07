@@ -7,6 +7,13 @@
     <title>Housie Ticket Generator | Dessert</title>
     <link rel="stylesheet" href="dessert_style.css">
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,180 +24,180 @@
 
     <img src="cake.png" alt="cake" width="20%"  class="bottom1">
     <img src="cookie.png" alt="cookie" width="20%"  class="bottom2">
+    <div id="ticketContainer">
+        <table id="ticket">
+        <tr>
+        <td></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+            <!-- caramel -->
+        <td class="closed"><sup style="color: #D3455B;">C</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">M</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <table id="ticket">
-    <tr>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-        <!-- caramel -->
-    <td class="closed"><sup style="color: #D3455B;">C</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">M</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+            <!-- H, E -->
+        <td class="closed"><sup style="color: #D3455B;">H</sup> <span>35</span></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-        <!-- H, E -->
-    <td class="closed"><sup style="color: #D3455B;">H</sup> <span>35</span></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">C</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">C</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">V</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">V</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+            <!-- ALOMOND -->
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">M</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">N</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">D</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-        <!-- ALOMOND -->
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">M</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">O</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">N</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">D</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">T</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">I</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">T</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">I</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
+        <td></td>
+        <!-- FALUDA -->
+        <td class="closed"><sup style="color: #D3455B;">F</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">U</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">D</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
-    <td></td>
-    <!-- FALUDA -->
-    <td class="closed"><sup style="color: #D3455B;">F</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">U</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">D</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
 
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="closed"><sup style="color: #D3455B;">L</sup> <span>35</span></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td></td>
-    <!-- STRAWBERRY  -->
-    <td class="closed"><sup style="color: #D3455B;">S</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">T</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">W</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">B</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
-    <td class="closed"><sup style="color: #D3455B;">Y</sup> <span>35</span></td>
-    </tr>
-    </table>
-
-    <button class="download">Download</button>
+        <tr>
+        <td></td>
+        <!-- STRAWBERRY  -->
+        <td class="closed"><sup style="color: #D3455B;">S</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">T</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">A</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">W</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">B</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">E</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">R</sup> <span>35</span></td>
+        <td class="closed"><sup style="color: #D3455B;">Y</sup> <span>35</span></td>
+        </tr>
+        </table>
+    </div>
+    <button class="download" onclick="downloadTicket()">Download</button>
     <button class="download" onclick="genNewTicket()">Generate</button>
 
 </body>
