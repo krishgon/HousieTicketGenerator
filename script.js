@@ -11,7 +11,7 @@ function genNewTicket() {
     var ticketCells = document.getElementsByClassName("closed");
     var ticketNumbers = getNumberList();
 
-    console.log("next will be the original value");
+    // console.log("next will be the original value");
     ticketNumbers.sort((a,b)=>a-b);
     console.log(ticketNumbers);
 
@@ -36,7 +36,7 @@ function getNumberList(){
             generatedNumbers.push(number);
         }
     }
-    console.log(generatedNumbers);
+    // console.log(generatedNumbers);
     return generatedNumbers;
 }
 
@@ -55,17 +55,37 @@ function getRandNum() {
     return Math.floor(Math.random() * 100);
 }
 
-function downloadTicket(){
-    var node = document.getElementById("ticketContainer");
 
-    domtoimage.toPng(node)
-        .then(function(dataUrl){
-            var img = new Image();
-            img.src = dataUrl;
-            downloadURI(dataUrl, "ticket.png")
-        }).catch(function(error){
-            console.error("daya, kuch toh gadbad hai", error);
-        });
+var counter = 0;
+var quantity = 0;
+
+function getDownloadableTickets(){
+    quantity = parseInt(prompt("Kitni टिकट chahie ?", "50"));
+    if((quantity != null) && (quantity!="0")){
+        counter = 0;
+        downloadTicket();
+    }
+}
+
+function downloadTicket(){
+    counter = counter + 1;
+
+    console.log("the value of counter is " + counter);
+    console.log("the value of quantity is " + quantity);
+    
+    if(counter < quantity+1){
+        genNewTicket();
+        var node = document.getElementById("ticketContainer");
+
+        domtoimage.toPng(node, {bgcolor: "#46535e"})
+            .then(function(dataUrl){
+                var img = new Image();
+                img.src = dataUrl;
+                downloadURI(dataUrl, "ticket.png")
+            }).catch(function(error){
+                console.error("daya, kuch toh gadbad hai", error);
+            });
+    }
 }
 
 
@@ -77,6 +97,8 @@ function downloadURI(uri, name){
     link.click();
     document.body.removeChild(link);
     delete link;
+    console.log("downloaded")
+    downloadTicket();
 }
 
 
