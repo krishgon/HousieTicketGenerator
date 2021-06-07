@@ -11,7 +11,7 @@ function genNewTicket() {
     var ticketCells = document.getElementsByClassName("closed");
     var ticketNumbers = getNumberList();
 
-    console.log("next will be the original value");
+    // console.log("next will be the original value");
     ticketNumbers.sort((a,b)=>a-b);
     console.log(ticketNumbers);
 
@@ -36,7 +36,7 @@ function getNumberList(){
             generatedNumbers.push(number);
         }
     }
-    console.log(generatedNumbers);
+    // console.log(generatedNumbers);
     return generatedNumbers;
 }
 
@@ -54,3 +54,41 @@ function generateHousieNumber() {
 function getRandNum() {
     return Math.floor(Math.random() * 100);
 }
+
+
+var counter = 0;
+
+
+function downloadTicket(){
+    counter = counter + 1;
+    
+    if(counter < 5){
+        genNewTicket();
+        var node = document.getElementById("ticketContainer");
+
+        domtoimage.toPng(node)
+            .then(function(dataUrl){
+                var img = new Image();
+                img.src = dataUrl;
+                downloadURI(dataUrl, "ticket.png")
+            }).catch(function(error){
+                console.error("daya, kuch toh gadbad hai", error);
+            });
+    }
+}
+
+
+function downloadURI(uri, name){
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
+    console.log("downloaded")
+    downloadTicket();
+}
+
+
+
