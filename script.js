@@ -57,14 +57,23 @@ function getRandNum() {
 
 
 var counter = 0;
+var quantity = 0;
 
+function getDownloadableTickets(){
+    quantity = parseInt(prompt("Kitni टिकट chahie ?", "50"));
+    if((quantity != null) && (quantity!="0")){
+        counter = 0;
+        downloadTicket();
+    }
+}
 
 function downloadTicket(){
     counter = counter + 1;
 
     console.log("the value of counter is " + counter);
+    console.log("the value of quantity is " + quantity);
     
-    if(counter < 5){
+    if(counter < quantity+1){
         genNewTicket();
         var node = document.getElementById("ticketContainer");
 
