@@ -1,6 +1,6 @@
-var generatedNumbers = [];
 
-var ticketNumbers = [];
+
+
 
 
 function goToGenerator() {
@@ -9,15 +9,11 @@ function goToGenerator() {
 
 function genNewTicket() {
     var ticketCells = document.getElementsByClassName("closed");
-
-    while(ticketNumbers.length<43){
-        var numberOfBox = getUniqueNumber().toString();
-        ticketNumbers.push(numberOfBox);
-    }
+    var ticketNumbers = getNumberList();
 
     console.log("next will be the original value");
-    ticketNumbers.sort()
-    console.log(ticketNumbers)
+    ticketNumbers.sort();
+    console.log(ticketNumbers);
 
     for(var i = 0, len = ticketCells.length; i < len; i++){
         var numberArea = ticketCells[i].getElementsByTagName("span")[0];
@@ -25,19 +21,25 @@ function genNewTicket() {
     }
 }
 
-function getUniqueNumber(){
-    var number = generateHousieNumber();
-    
-    if(generatedNumbers.length == 0){
-        generatedNumbers.push(number);
-    }else{
-        while(generatedNumbers.includes(number)==true){
-            number = generateHousieNumber();
+function getNumberList(){
+    var generatedNumbers = [];
+
+    while(generatedNumbers.length<43){
+        var number = generateHousieNumber();
+
+        if(generatedNumbers.length == 0){
+            generatedNumbers.push(number);
+        }else{
+            while(generatedNumbers.includes(number)==true){
+                number = generateHousieNumber();
+            }
+            generatedNumbers.push(number);
         }
+
     }
-    // console.log();
-    return number;
-    // console.log(generatedNumbers.includes(number));
+
+    console.log(generatedNumbers);
+    return generatedNumbers;
 }
 
 
@@ -47,8 +49,6 @@ function generateHousieNumber() {
     while ((x > 90) || (x == 0)) {
         x = getRandNum();
     }
-
-    
 
     return x;
 }
