@@ -7,4 +7,4 @@ I saw one of my relatives buying themed housie tickets online at the cost of Rs.
 ## Contributing
 As of now, only one theme that is [Desserts](https://krishgon.github.io/HousieTicketGenerator/generate_dessert.html) exist. You can always try to add more themes and send pull requests
 
-You can contribute in other ways as well, all of which are mentioned under [issues]{https://github.com/krishgon/HousieTicketGenerator/issues} section of this repository.
+You can contribute in other ways as well, all of which are mentioned under [issues](https://github.com/krishgon/HousieTicketGenerator/issues}) section of this repository.
